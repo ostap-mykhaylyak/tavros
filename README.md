@@ -1,6 +1,6 @@
 Lightweight orchestration toolkit for Percona, and Galera clusters. It provides clean, modular automation for deployment, conversion to cluster mode, monitoring, and secure management of your database infrastructure.
 
-#Features
+#Features#
 
 🚀 Simple MySQL Server installation
 
@@ -14,7 +14,7 @@ Lightweight orchestration toolkit for Percona, and Galera clusters. It provides 
 
 🎯 Easy-to-use command interface
 
-#Quick Install
+#Quick Install#
 ```bash
 git clone https://github.com/ostap-mykhaylyak/tavros.git /opt/tavros
 chmod +x /opt/tavros/main.sh
