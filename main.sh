@@ -3,7 +3,6 @@ set -euo pipefail
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$BASE_DIR/config.sh"
-source "$BASE_DIR/utils/logging.sh"
 source "$BASE_DIR/utils/common.sh"
 
 COMMAND=$1; shift || true
