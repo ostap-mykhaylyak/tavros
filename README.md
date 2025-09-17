@@ -15,7 +15,7 @@ chmod +x /opt/tavros/main.sh
 ln -s /opt/tavros/main.sh /usr/local/bin/tavros
 ```
 
-# Updating
+## Updating
 ```bash
 cd /opt/tavros
 git pull
