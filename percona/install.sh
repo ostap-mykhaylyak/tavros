@@ -55,3 +55,37 @@ install_percona() {
     
     log "Percona Server ${PERCONA_VERSION} installato con successo"
 }
+
+# Configurazione file .my.cnf
+setup_mysql_config() {
+    log "Configurazione file .my.cnf..."
+    
+    cat > "$MYSQL_CONFIG_FILE" << EOF
+[client]
+user=root
+password=$MYSQL_ROOT_PASSWORD
+host=localhost
+port=3306
+
+[mysql]
+auto-rehash
+safe-updates
+
+[mysqldump]
+quick
+lock-tables=false
+single-transaction=true
+
+[mysqladmin]
+force
+
+[xtrabackup]
+user=$XTRABACKUP_USER
+password=$XTRABACKUP_PASSWORD
+EOF
+    
+    chmod 600 "$MYSQL_CONFIG_FILE"
+    chown root:root "$MYSQL_CONFIG_FILE"
+    
+    log "File .my.cnf configurato"
+}
