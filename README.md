@@ -1,18 +1,12 @@
 Lightweight orchestration toolkit for Percona, and Galera clusters. It provides clean, modular automation for deployment, conversion to cluster mode, monitoring, and secure management of your database infrastructure.
 
 # Features
-
-🚀 Simple MySQL Server installation
-
-🔄 Convert standalone MySQL to Galera Cluster
-
-📊 Cluster monitoring and health check
-
-💾 Backup and restoration utilities
-
-🔒 Automatic secure configuration
-
-🎯 Easy-to-use command interface
+* 🚀 Simple MySQL Server installation
+* 🔄 Convert standalone MySQL to Galera Cluster
+* 📊 Cluster monitoring and health check
+* 💾 Backup and restoration utilities
+* 🔒 Automatic secure configuration
+* 🎯 Easy-to-use command interface
 
 # Quick Install
 ```bash
