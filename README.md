@@ -14,6 +14,13 @@ git clone https://github.com/ostap-mykhaylyak/tavros.git /opt/tavros
 chmod +x /opt/tavros/main.sh
 ln -s /opt/tavros/main.sh /usr/local/bin/tavros
 ```
+
+# Updating
+```bash
+cd /opt/tavros
+git pull
+```
+
 ## Examples
 ```bash
 # Install MySQL with a custom root password
