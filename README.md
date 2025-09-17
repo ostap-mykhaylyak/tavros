@@ -13,6 +13,8 @@ Lightweight orchestration toolkit for Percona, and Galera clusters. It provides 
 git clone https://github.com/ostap-mykhaylyak/tavros.git /opt/tavros
 chmod +x /opt/tavros/main.sh
 ln -s /opt/tavros/main.sh /usr/local/bin/tavros
+echo 'export PATH="/opt/tavros:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Updating
