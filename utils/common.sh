@@ -1,3 +1,5 @@
+#!/bin/bash
+
 check_root() {
     if [[ $EUID -ne 0 ]]; then
         error "Questo script deve essere eseguito come root"
@@ -44,11 +46,13 @@ init_environment() {
     fi
 }
 
-show_help() {
-    echo -e "${GREEN}MySQL Server Orchestrator con supporto Galera Cluster${NC}"
-    echo ""
-    echo "UTILIZZO:"
-    echo "  $0 <comando> [opzioni]"
-    echo ""
-    # ... resto dell'help
+require_params() {
+  local expected_count=$1
+  shift
+  local func_name="${FUNCNAME[1]}"   # Nome della funzione chiamante
+  local provided_count=$#
+
+  if [[ $provided_count -lt $expected_count ]]; then
+    error "Function '$func_name' requires at least $expected_count parameters, but got $provided_count"
+  fi
 }
