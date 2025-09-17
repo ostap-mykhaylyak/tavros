@@ -1,6 +1,6 @@
 Lightweight orchestration toolkit for Percona, and Galera clusters. It provides clean, modular automation for deployment, conversion to cluster mode, monitoring, and secure management of your database infrastructure.
 
-# Features
+## Features
 * 🚀 Simple MySQL Server installation
 * 🔄 Convert standalone MySQL to Galera Cluster
 * 📊 Cluster monitoring and health check
@@ -8,11 +8,28 @@ Lightweight orchestration toolkit for Percona, and Galera clusters. It provides 
 * 🔒 Automatic secure configuration
 * 🎯 Easy-to-use command interface
 
-# Quick Install
+## Quick Install
 ```bash
 git clone https://github.com/ostap-mykhaylyak/tavros.git /opt/tavros
 chmod +x /opt/tavros/main.sh
 ln -s /opt/tavros/main.sh /usr/local/bin/tavros
+```
+## Examples
+```bash
+# Install MySQL with a custom root password
+tavros install mysecurepassword123
+
+# Convert to cluster with node name and IP
+tavros convert-to-cluster node1 192.168.1.10
+
+# Add a node to an existing cluster
+tavros add-node node2 192.168.1.11 "192.168.1.10,192.168.1.11"
+
+# Backup all databases
+tavros backup all
+
+# Check cluster health
+tavros cluster-health
 ```
 
 ```
