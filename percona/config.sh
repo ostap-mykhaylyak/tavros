@@ -73,19 +73,6 @@ collation_server = utf8mb4_unicode_ci
 thread_handling = pool-of-threads
 extra_port = 33061
 extra_max_connections = 10
-
-# CLUSTER PREPARATION (commented out for standalone mode)
-# When convert-to-cluster is used, these will be activated:
-# wsrep_provider = /usr/lib/galera4/libgalera_smm.so
-# wsrep_cluster_name = $CLUSTER_NAME
-# wsrep_cluster_address = gcomm://
-# wsrep_node_name = 
-# wsrep_node_address = 
-# wsrep_sst_method = xtrabackup-v2
-# wsrep_sst_auth = 
-# wsrep_slave_threads = 8
-# wsrep_provider_options = "gcache.size=512M; gcs.fc_limit=256; gcs.fc_factor=0.99"
-
 EOF
     
     log "✅ Configurazione cluster-ready applicata (modalità standalone)"
